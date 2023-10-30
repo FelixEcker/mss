@@ -2,7 +2,11 @@ sector .config
   fields mariebuild:
     list files 'mb:bulk'
 
-    str comp_cmd 'sh -c "cd $(file) && mb -q -n -m release && mv $(file) ../bin/ && echo :: build for $(file) finished"'
+    str release_flags 'release'
+    str debug_flags 'debug'
+
+    str comp_cmd 'sh -c "cd $(file) && mb -n -m $(mode_flags) && mv $(file) ../bin/ && echo :: build for $(file) finished"'
+    str finalize_cmd 'echo Find the built software suite within ./bin/'
 
 sector .scripts
   lines prepare:
