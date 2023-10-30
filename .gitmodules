@@ -1,0 +1,9 @@
+[submodule "bulk"]
+	path = bulk
+	url = https://github.com/FelixEcker/bulk.git
+[submodule "mcfg"]
+	path = mcfg
+	url = https://github.com/FelixEcker/mcfg.git
+[submodule "mb"]
+	path = mb
+	url = https://github.com/FelixEcker/mariebuild.git
