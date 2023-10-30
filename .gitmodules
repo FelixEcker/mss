@@ -10,3 +10,6 @@
 [submodule "sadsuite"]
 	path = sadsuite
 	url = https://github.com/FelixEcker/sad.git
+[submodule "pasfetch"]
+	path = pasfetch
+	url = https://github.com/FelixEcker/pasfetch.git

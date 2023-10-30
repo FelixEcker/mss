@@ -1,6 +1,6 @@
 sector .config
   fields mariebuild:
-    list files 'mb:bulk:sadsuite'
+    list files 'mb:bulk:sadsuite:pasfetch'
 
     str release_flags 'release'
     str debug_flags 'debug'
