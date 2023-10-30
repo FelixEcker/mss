@@ -7,3 +7,6 @@
 [submodule "mb"]
 	path = mb
 	url = https://github.com/FelixEcker/mariebuild.git
+[submodule "sadsuite"]
+	path = sadsuite
+	url = https://github.com/FelixEcker/sad.git

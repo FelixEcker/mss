@@ -1,12 +1,12 @@
 sector .config
   fields mariebuild:
-    list files 'mb:bulk'
+    list files 'mb:bulk:sadsuite'
 
     str release_flags 'release'
     str debug_flags 'debug'
 
     str comp_cmd 'sh -c "cd $(file) && mb -n -m $(mode_flags) && mv $(file) ../bin/ && echo :: build for $(file) finished"'
-    str finalize_cmd 'echo Find the built software suite within ./bin/'
+    str finalize_cmd 'sh -c "find bin/ -mindepth 2 -type f -print0 | xargs -0 mv -t ./bin && find bin/ -mindepth 1 -type d -print0 | xargs -0 rm -r"'
 
 sector .scripts
   lines prepare:
