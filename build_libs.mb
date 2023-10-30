@@ -5,8 +5,8 @@ sector .config
     str release_flags 'release'
     str debug_flags 'debug'
 
-    str comp_cmd 'bash -c "cd $(file) && mb -n -m $(mode_flags) && mv lib$(file)(.a|.so*) ../lib/ && echo :: build for $(file) finished"'
-    str finalize_cmd 'sh -c "find lib/ -mindepth 2 -type f -print0 | xargs -0 mv -t ./lib && find lib/ -mindepth 1 -type d -print0 | xargs -0 rm -r"'
+    str comp_cmd 'bash -c "cd $(file) && mb -n -m $(mode_flags) && mv lib$(file).* ../lib/ && echo :: build for $(file) finished"'
+    str finalize_cmd 'sh -c "find lib/ -mindepth 2 -type f -print0 | xargs -0 mv -t ./lib 2> /dev/null && find lib/ -mindepth 1 -type d -print0 | xargs -0 rm -r" || true'
 
 sector .scripts
   lines prepare:
