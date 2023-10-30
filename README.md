@@ -7,8 +7,12 @@ Simply execute the buildfile using mariebuild. When successful, all binaries of 
 ## contents
 **NOTE:** Not all member programs are currently being built.
 
-* bulk
+* bulk <br>
 A simple pager program
 
-* mariebuild
+* mariebuild <br>
 A simple build system inspired by my hate against makefiles
+
+* sadsuite
+  * sadv
+  * sadhtml
