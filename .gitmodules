@@ -13,3 +13,6 @@
 [submodule "pasfetch"]
 	path = pasfetch
 	url = https://github.com/FelixEcker/pasfetch.git
+[submodule "pasmotd"]
+	path = pasmotd
+	url = https://github.com/FelixEcker/pasmotd.git

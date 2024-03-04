@@ -1,8 +1,42 @@
-sector .config
-  fields mariebuild:
-    list files 'build_progs.mb:build_libs.mb'
+sector config
+  section mariebuild
+    str build_type 'full'
 
-    str release_flags 'release'
-    str debug_flags 'debug'
+    list str targets 'clean', 'release'
+    str default 'release'
+  end
+end
 
-    str comp_cmd 'mb -i $(file) -n -m $(mode_flags)'
+sector targets
+  section clean
+  end
+
+  section sources
+    str exec 'git submodule update --init --remote --merge'
+  end
+
+  section release
+    list str required_targets 'sources'
+    list str c_rules 'build'
+  end
+end
+
+sector c_rules
+  section build
+    str exec_mode 'singular'
+    list str input 'bulk', 'pasfetch', 'pasmotd', 'sadsuite'
+
+    str input_format '$(%element%)'
+    str output_format '$(%element%)'
+
+    str exec '
+#!/bin/bash
+
+cd $(%input%) || exit
+mb -n || exit
+
+cd ..
+cp $(%input%)/$(%output%) bin/ -r
+    '
+  end
+end
