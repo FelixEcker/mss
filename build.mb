@@ -34,6 +34,10 @@ sector c_rules
     str exec '
 #!/bin/bash
 
+if [[ ! -d bin/ ]]; then
+  mkdir bin
+fi
+
 cd $(%input%) || exit
 mb -n -t $(%target_target%) || exit
 
