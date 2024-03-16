@@ -16,6 +16,8 @@ sector targets
   end
 
   section release
+    str target_target 'release'
+
     list str required_targets 'sources'
     list str c_rules 'build'
   end
@@ -24,7 +26,7 @@ end
 sector c_rules
   section build
     str exec_mode 'singular'
-    list str input 'bulk', 'pasfetch', 'pasmotd', 'sadsuite'
+    list str input 'mb', 'bulk', 'pasfetch', 'pasmotd', 'sadsuite'
 
     str input_format '$(%element%)'
     str output_format '$(%element%)'
@@ -33,7 +35,7 @@ sector c_rules
 #!/bin/bash
 
 cd $(%input%) || exit
-mb -n || exit
+mb -n -t $(%target_target%) || exit
 
 cd ..
 cp $(%input%)/$(%output%) bin/ -r
