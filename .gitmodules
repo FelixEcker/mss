@@ -16,3 +16,6 @@
 [submodule "pasmotd"]
 	path = pasmotd
 	url = https://github.com/FelixEcker/pasmotd.git
+[submodule "argtest"]
+	path = argtest
+	url = https://github.com/FelixEcker/argtest.git
