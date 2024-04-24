@@ -26,7 +26,7 @@ end
 sector c_rules
   section build
     str exec_mode 'singular'
-    list str input 'mb', 'bulk', 'pasfetch', 'pasmotd', 'sadsuite'
+    list str input 'mb', 'argtest', 'bulk', 'pasfetch', 'pasmotd', 'sadsuite', 'snip'
 
     str input_format '$(%element%)'
     str output_format '$(%element%)'
