@@ -27,8 +27,8 @@ sector c_rules
   section build
     str exec_mode 'singular'
  
-    list str input 'mb', 'argtest', 'bulk', 'pasfetch', 'pasmotd', 'sadsuite', 'snip'
-    list str output 'mb', 'argtest', 'bulk', 'pasfetch', 'pasmotd', 'sadsuite/sad*', 'build/release/snip'
+    list str input 'mb', 'argtest', 'pasfetch', 'pasmotd', 'sadsuite', 'snip', 'fpc-sitegen'
+    list str output 'mb', 'argtest', 'pasfetch', 'pasmotd', 'sadsuite/sad*', 'build/release/snip', 'build/release/fpc-sitegen'
 
     str input_format '$(%element%)'
     str output_format '$(%element%)'
