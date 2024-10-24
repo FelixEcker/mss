@@ -22,3 +22,6 @@
 [submodule "snip"]
 	path = snip
 	url = https://github.com/FelixEcker/snip.git
+[submodule "fpc-sitegen"]
+	path = fpc-sitegen
+	url = https://github.com/FelixEcker/fpc-sitegen.git
